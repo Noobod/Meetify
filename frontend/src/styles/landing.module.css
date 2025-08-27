@@ -1,0 +1,132 @@
+/* landingPage.module.css */
+
+.landingPageContainer {
+  width: 100vw;
+  min-height: 100vh;
+  background: url("/background.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.navList {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navButton {
+  padding: 0.5rem 1rem;
+  background-color: #D97500;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #ff9839;
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 2rem 3rem;
+}
+
+.leftContent {
+  max-width: 600px;
+}
+
+.leftContent h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.leftContent p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.getStartedBtn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background: #D97500;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+.getStartedBtn:hover {
+  background: #ff9839;
+}
+
+.rightImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+  .landingMainContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2rem;
+  }
+  .leftContent h1 {
+    font-size: 2rem;
+  }
+  .getStartedBtn {
+    font-size: 1.3rem;
+  }
+  .rightImage img {
+    height: 50vh;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  nav h2 {
+    font-size: 1.5rem;
+  }
+  .navList {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  .landingMainContainer {
+    padding: 1rem;
+  }
+  .leftContent h1 {
+    font-size: 1.6rem;
+  }
+  .leftContent p {
+    font-size: 1rem;
+  }
+  .getStartedBtn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  .rightImage img {
+    height: 35vh;
+  }
+}

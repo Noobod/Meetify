@@ -1,0 +1,151 @@
+/* Navbar */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(90deg, #1a1a1a, #2b2b2b);
+  color: white;
+  border-bottom: 1px solid #333;
+  flex-wrap: wrap;
+}
+
+.navLogo h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.historyAction {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.historyAction:hover {
+  color: #ff9839;
+}
+
+.logoutBtn {
+  background-color: #D97500;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background-color: #ff9839;
+  transform: scale(1.05);
+}
+
+/* Meet container */
+.meetContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+  padding: 3rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #f7f7f7 0%, #e0e0e0 100%);
+  border-radius: 20px;
+  margin: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 500px;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.leftPanel h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.joinBox {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.joinBox button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.joinBox button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.rightPanel > img {
+  max-width: 30vw;
+  border-radius: 20px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.rightPanel > img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+  .meetContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+  .rightPanel > img {
+    max-width: 50%;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .navActions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .leftPanel h2 {
+    font-size: 1.5rem;
+  }
+  .joinBox {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .rightPanel > img {
+    max-width: 70%;
+  }
+  .meetContainer {
+    padding: 1rem;
+    gap: 2rem;
+  }
+}

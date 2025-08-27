@@ -1,0 +1,119 @@
+/* videomeet.module.css */
+
+/* Main container */
+.meetVideoContainer {
+    position: relative;
+    height: 100vh;
+    background: rgb(1, 4, 48);
+    overflow: hidden;
+}
+
+/* Conference videos */
+.conferenceView {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.conferenceView video {
+    width: 40vw;
+    height: 20vh;
+    min-width: 30vw;
+    border-radius: 10px;
+}
+
+/* User's small video overlay */
+.meetUserVideo {
+    position: absolute;
+    bottom: 10vh;
+    left: 0;
+    height: 20vh;
+    width: auto;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+/* Control buttons at bottom */
+.buttonContainers {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.buttonContainers svg {
+    font-size: 3rem;
+}
+
+/* Chat panel */
+.chatRoom {
+    position: absolute;
+    height: 90vh;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    width: 30vw;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 5;
+}
+
+.chatContainer {
+    position: relative;
+    height: 100%;
+}
+
+.chattingArea {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ------------------- Responsive ------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .conferenceView video {
+        width: 45vw;
+        height: 22vh;
+    }
+    .meetUserVideo {
+        height: 18vh;
+    }
+    .chatRoom {
+        width: 35vw;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .conferenceView {
+        flex-direction: column;
+        align-items: center;
+    }
+    .conferenceView video {
+        width: 90vw;
+        height: auto;
+    }
+    .meetUserVideo {
+        bottom: 5vh;
+        height: 15vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .buttonContainers {
+        bottom: 5px;
+    }
+    .chatRoom {
+        position: fixed;
+        width: 90vw;
+        height: 40vh;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 10px 10px 0 0;
+        z-index: 20;
+    }
+}
